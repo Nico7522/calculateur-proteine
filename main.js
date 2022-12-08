@@ -48,13 +48,16 @@ listeIngredients.forEach((aliment) => {
     if (result.innerText !== " ") {
       buttonReset.style.display = "inline";
     }
-  });
-});
+    buttonReset.addEventListener("click", () => {
+      console.log(inputPoids.value);
+      result.innerText = " ";
+      inputPoids.value = " ";
+      input.checked = false;
 
-buttonReset.addEventListener("click", () => {
-  result.innerText = " ";
-  buttonReset.style.display = "none";
-  totalResult = 0;
+      buttonReset.style.display = "none";
+      totalResult = 0;
+    });
+  });
 });
 
 // let input = document.createElement("input");
